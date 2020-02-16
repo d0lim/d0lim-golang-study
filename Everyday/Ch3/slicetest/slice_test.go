@@ -47,3 +47,36 @@ func Example_append() {
 	// [사과 바나나 토마토 포도 딸기]
 	// [사과 바나나 포도 딸기]
 }
+
+func Example_sliceCopy() {
+	src := []int{30, 20, 50, 10, 40}
+	dst := make([]int, len(src))
+	for i := range src {
+		dst[i] = src[i]
+	}
+	fmt.Println(dst)
+	// Output: [30 20 50 10 40]
+}
+
+func Example_sliceCopyWithCopy() {
+	src := []int{30, 20, 50, 10, 40}
+	dst1 := make([]int, 3)
+	// You cannot copy the slice like Python
+	// x := []int{3, 4, 5}
+	// y := x[:]
+	// NOT WORK!!
+	if n := copy(dst1, src); n != len(src) {
+		fmt.Println("복사가 덜 됐습니다.")
+	}
+	fmt.Println(dst1)
+	
+	dst2 := make([]int, len(src))
+	if n := copy(dst2, src); n != len(src) {
+		fmt.Println("복사가 덜 됐습니다.")
+	}
+	fmt.Println(dst2)
+	// Output: 
+	// 복사가 덜 됐습니다.
+	// [30 20 50]
+	// [30 20 50 10 40]
+}

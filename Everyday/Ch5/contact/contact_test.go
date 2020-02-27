@@ -1,0 +1,31 @@
+package contact_test
+
+import "fmt"
+
+type Address struct {
+	City	string
+	State	string
+}
+
+type Telephone struct {
+	Mobile string
+	Direct string
+}
+
+type Contact struct {
+	Address
+	Telephone
+}
+
+func ExampleContact() {
+	var c Contact
+	c.Mobile = "123-456-789"
+	fmt.Println(c.Telephone.Mobile)
+	c.Address.City = "San Francisco"
+	c.State = "CA"
+	c.Direct = "N/A"
+	fmt.Println(c)
+	// Output:
+	// 123-456-789
+	// {{San Francisco CA} {123-456-789 N/A}}
+}

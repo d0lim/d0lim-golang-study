@@ -1,5 +1,5 @@
 // Package task is an example for struct and JSON code.
-package task // import "github.com/imdigo/DolimGoLangStudy/Everyday/Ch6/task"
+package task // import "github.com/imdigo/DolimGoLangStudy/task"
 
 import (
 	"errors"

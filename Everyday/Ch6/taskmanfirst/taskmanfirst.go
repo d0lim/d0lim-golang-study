@@ -2,6 +2,7 @@ package main // import "github.com/imdigo/DolimGoLangStudy/Everyday/Ch6/taskmanf
 
 import (
 	"encoding/json"
+	"html/template"
 	"errors"
 	"fmt"
 	"log"
@@ -222,6 +223,39 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
+}
+
+const htmlPrefix = "/task/"
+
+var tmpl = template.Must(template.ParseGlob("html/*.html"))
+
+func htmlHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method != "GET" {
+		log.Println(r.Method, "method is not supported")
+		return
+	}
+	getID := func() (ID, error) {
+		id := ID(r.URL.Path[len(htmlPrefix):])
+		if id == "" {
+			return id, errors.New("htmlHandler: ID is empty")
+		}
+		return id, nil
+	}
+	id, err := getID()
+	if err != nil {
+		log.Println(err)
+		return
+	}
+	t, err := m.Get(id)
+	err = tmpl.ExecuteTemplate(w, "task.html", &Response {
+		ID:		id,
+		Task:	t,
+		Error:	ResponeError{err},
+	})
+	if err != nil {
+		log.Println(err)
+		return
+	}
 }
 
 

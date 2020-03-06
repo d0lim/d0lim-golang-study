@@ -14,6 +14,7 @@ import (
 // FIXME: m is NOT thread-safe
 var m = task.NewMemoryDataAccess()
 
+// Need to post application/x-www-form-urlencoded
 func getTasks(r *http.Request) ([]task.Task, error) {
 	var result []task.Task
 	if err := r.ParseForm(); err != nil {

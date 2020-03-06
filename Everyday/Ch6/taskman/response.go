@@ -8,13 +8,13 @@ import (
 	"github.com/imdigo/DolimGoLangStudy/task"
 )
 
-// ResponeError is the error for the JSON Response.
-type ResponeError struct {
+// ResponseError is the error for the JSON Response.
+type ResponseError struct {
 	Err error
 }
 
 // MarshalJSON returns the JSON representation of the error.
-func (err ResponeError) MarshalJSON() ([]byte, error) {
+func (err ResponseError) MarshalJSON() ([]byte, error) {
 	if err.Err == nil {
 		return []byte("null"), nil
 	}
@@ -22,7 +22,7 @@ func (err ResponeError) MarshalJSON() ([]byte, error) {
 }
 
 // UnmarshalJSON parses the JSON representation of the error.
-func (err *ResponeError) UnmarshalJSON(b []byte) error {
+func (err *ResponseError) UnmarshalJSON(b []byte) error {
 	var v interface{}
 	if err := json.Unmarshal(b, v); err != nil {
 		return err
@@ -48,5 +48,5 @@ func (err *ResponeError) UnmarshalJSON(b []byte) error {
 type Response struct {
 	ID		task.ID				`json:"id,omitempty"`
 	Task	task.Task		`json:"task"`
-	Error	ResponeError	`json:"error"`
+	Error	ResponseError	`json:"error"`
 }

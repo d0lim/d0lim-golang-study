@@ -1,3 +1,5 @@
+github.com/gorilla/mux v1.7.4 h1:VuZ8uybHlWmqV03+zRzdwKL4tUnIp1MAQtp1mIFE1bc=
+github.com/gorilla/mux v1.7.4/go.mod h1:DVbg23sWSpFRCP0SfiEN6jmj59UnW/n46BH5rLB71So=
 github.com/imdigo/DolimGoLangStudy v0.0.0-20200304145129-06f1adb442e0 h1:BLavjLfYy1cWHHjx29bi/BIYwAcWsJAlvkEfBMJ8kbk=
 github.com/imdigo/DolimGoLangStudy/task v0.0.0-20200304145129-06f1adb442e0 h1:+BsVIxq6hu5nEgCQTLPAXk1nKVwiEl8d8Qm+Kqf+wxc=
 github.com/imdigo/DolimGoLangStudy/task v0.0.0-20200304145129-06f1adb442e0/go.mod h1:R7fxJi8fiaBiiwDhUjWkWLr4XTO1SFHIsQYx4IRKEng=

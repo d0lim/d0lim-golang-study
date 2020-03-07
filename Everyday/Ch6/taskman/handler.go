@@ -9,10 +9,12 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/imdigo/DolimGoLangStudy/task"
+	"github.com/imdigo/DolimGoLangStudy/task/mongodao"
 )
 
 // FIXME: m is NOT thread-safe
-var m = task.NewMemoryDataAccess()
+// var m = task.NewMemoryDataAccess()
+var m = mongodao.New("127.0.0.1:27017", "taskman", "taskman_collection")
 
 // Need to post application/x-www-form-urlencoded
 func getTasks(r *http.Request) ([]task.Task, error) {

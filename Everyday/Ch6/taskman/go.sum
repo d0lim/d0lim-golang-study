@@ -34,10 +34,13 @@ github.com/google/go-cmp v0.2.0/go.mod h1:oXzfMopK8JAjlY9xF4vHSVASa0yLyX7SntLO5a
 github.com/gorilla/mux v1.7.4 h1:VuZ8uybHlWmqV03+zRzdwKL4tUnIp1MAQtp1mIFE1bc=
 github.com/gorilla/mux v1.7.4/go.mod h1:DVbg23sWSpFRCP0SfiEN6jmj59UnW/n46BH5rLB71So=
 github.com/imdigo/DolimGoLangStudy v0.0.0-20200304145129-06f1adb442e0 h1:BLavjLfYy1cWHHjx29bi/BIYwAcWsJAlvkEfBMJ8kbk=
+github.com/imdigo/DolimGoLangStudy v0.0.2 h1:eHTlGZdtwIKWDi3HbDBAyb9eIvktpIZiWwfvbMZHbjw=
 github.com/imdigo/DolimGoLangStudy/task v0.0.0-20200304145129-06f1adb442e0 h1:+BsVIxq6hu5nEgCQTLPAXk1nKVwiEl8d8Qm+Kqf+wxc=
 github.com/imdigo/DolimGoLangStudy/task v0.0.0-20200304145129-06f1adb442e0/go.mod h1:R7fxJi8fiaBiiwDhUjWkWLr4XTO1SFHIsQYx4IRKEng=
 github.com/imdigo/DolimGoLangStudy/task v0.0.0-20200305143820-b41e9c2c99db h1:wGZUvhIF+x6gWebXx0ddiEAI8KBQJvFx+gOAIdrWXRk=
 github.com/imdigo/DolimGoLangStudy/task v0.0.0-20200305143820-b41e9c2c99db/go.mod h1:R7fxJi8fiaBiiwDhUjWkWLr4XTO1SFHIsQYx4IRKEng=
+github.com/imdigo/DolimGoLangStudy/task v0.0.0-20200307105547-d9e7b22a2b21 h1:KDjXAH7KmD7qOs35d2iR/woovAXMtHnWZRHtNHK21AU=
+github.com/imdigo/DolimGoLangStudy/task v0.0.0-20200307105547-d9e7b22a2b21/go.mod h1:Zv+tPCSqtCdtxDsdqUIC/ma4QyPnzWFQg2i0Husibw8=
 github.com/inconshreveable/mousetrap v1.0.0/go.mod h1:PxqpIevigyE2G7u3NXJIT2ANytuPF1OarO4DADm73n8=
 github.com/joho/godotenv v1.3.0/go.mod h1:7hK45KPybAkOC6peb+G5yklZfMxEjkZhHbwpqxOKXbg=
 github.com/karrick/godirwalk v1.8.0/go.mod h1:H5KPZjojv4lE+QYImBI8xVtrBRgYrIVsaRPx4tDPEn4=

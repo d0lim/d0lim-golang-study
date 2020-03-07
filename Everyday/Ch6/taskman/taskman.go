@@ -10,7 +10,7 @@ import (
 const (
 	apiPathPrefix = "/api/v1/task/"
 	htmlPathPrefix = "/task/"
-	idPattern = "/{id:[0-9]+}"
+	idPattern = "/{id:[0-9a-f]+}"
 )
 
 func main() {

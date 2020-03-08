@@ -1,6 +1,9 @@
 package channel_test
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func Example_simpleChannel() {
 	c := make(chan int)
@@ -66,3 +69,21 @@ func Example_closedChannel() {
 	// 0
 	// 0
 }
+
+func Example_contextSwitching() {
+	c := make(chan int)
+	for i := 0; i < 3; i++ {
+		go func(i int) {
+			for n := range c {
+				time.Sleep(1)
+				fmt.Println(i, n)
+			}
+		}(i)
+	}
+	for i := 0; i < 10; i++ {
+		c <- i
+	}
+	close(c)
+	// Non-deterministic!
+}
+
